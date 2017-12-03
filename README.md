@@ -1,8 +1,3 @@
-# QuizCandyDispenser
-Quiz Based Educational Candy Dispenser
-
-
-
 QuizCandyDispenser
 ===================
 
