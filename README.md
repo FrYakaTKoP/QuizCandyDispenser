@@ -24,11 +24,11 @@ BOM: Bill Of Material
 **thingiverse** *TODO: add link here*
 - Ardunio/Genuino Mega2560
 - 5V USB Power supply
-- USB2 A to B lead
+- Arduino Mega compatible USB lead
 - 1x RAMPS v1.4 
 - 1x RepRapDiscount_Full_Graphic_Smart_Controller
 incl. cables and ramps adapter
-- 4x HAPP Arcade Button or other with 28mm bore
+- 4x Mechanical endstops (eg.: https://www.thingiverse.com/thing:762 or https://www.banggood.com/5Pcs-RAMPS-1_4-Endstop-Switch-For-RepRap-Mendel-3D-Printer-With-70cm-Cable-p-1054555.html?rmmds=search&cur_warehouse=CN)
 - 9g Hobby RC Servo (Hextronik HXT-900 or similar)
 - Window (still unclear most likely a 100x150 photo frame) *TODO: Add dimension *
 
