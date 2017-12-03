@@ -23,7 +23,7 @@ BOM: Bill Of Material
 - 1x RAMPS v1.4 
 - 1x RepRapDiscount_Full_Graphic_Smart_Controller
 incl. cables and ramps adapter
-- 4x Mechanical endstops (eg.: https://www.thingiverse.com/thing:762 or https://www.banggood.com/5Pcs-RAMPS-1_4-Endstop-Switch-For-RepRap-Mendel-3D-Printer-With-70cm-Cable-p-1054555.html?rmmds=search&cur_warehouse=CN)
+- 4x Mechanical endstops (eg.: https://www.thingiverse.com/thing:762 or https://www.banggood.com/5Pcs-RAMPS-1_4-Endstop-Switch-For-RepRap-Mendel-3D-Printer-With-70cm-Cable-p-1054555.html?rmmds=search&cur_warehouse=CN or https://www.amazon.de/Rokoo-Mechanisches-Endstop-Schalter-Modul-Endstop-3D-Drucker/dp/B075FQD5NW/ref=sr_1_7?ie=UTF8&qid=1512333714&sr=8-7&keywords=ramps+endstop)
 - 9g Hobby RC Servo (Hextronik HXT-900 or similar)
 - Window (still unclear most likely a 100x150 photo frame) *TODO: Add dimension *
 
