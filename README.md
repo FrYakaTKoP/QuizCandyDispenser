@@ -41,7 +41,7 @@ Electrical Connections / Schematic
 -------------
 
 - Plug the Ramps board to the arduino mega
-- connect Servo to Xmax endstop input (servo signal to pin1)
+- connect Servo to Xmax endstop input (servo signal to pin1, Gnd to pin 2 , 5V to pin 3) -> normal servo connector has GND and 5V fliped! carefully remove the crimp from plastic housing with lifting the nose and then reinsert on new location
 - connect Input Button A to Ymin endstop
 - connect Input Button B to Ymax endstop
 - connect Input Button C to Zmin endstop
