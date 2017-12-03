@@ -23,6 +23,8 @@ BOM: Bill Of Material
 - 3D Printed Parts:
 **thingiverse** *TODO: add link here*
 - Ardunio/Genuino Mega2560
+- 5V USB Power supply
+- USB2 A to B lead
 - 1x RAMPS v1.4 
 - 1x RepRapDiscount_Full_Graphic_Smart_Controller
 incl. cables and ramps adapter
