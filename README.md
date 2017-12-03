@@ -9,6 +9,15 @@ The Project was born in a [**Discord Group**](https://discordapp.com/invite/KWpv
 
 The Initial Idea is a Candy Dispenser where you have to solve a question or similar, to get the Candy. The Hardware shall be mostly 3d printed or easy to source hardware. Like the very common RAMPS with lcd kit as the mainboard or the 9g hobby servo as actuator. 
 
+Project Status
+-----------
+
+Still pretty early phase of the project.  Inital Target is a to fix the "to Buy" Hardware, draw schematics and write a initial Hardware test program.
+
+License
+----
+*todo: add License information and credits here*
+
 
 BOM: Bill Of Material
 -------------
@@ -28,11 +37,16 @@ incl. cables and ramps adapter
 - Window (still unclear most likely a 100x150 photo frame) *TODO: Add dimension *
 
 
-Project Status
------------
+Electrical Connections / Schematic
+-------------
 
-Still pretty early phase of the project.  Inital Target is a to fix the "to Buy" Hardware, draw schematics and write a initial Hardware test program.
+- Plug the Ramps board to the arduino mega
+- connect Servo to Xmax endstop input (servo signal to pin1)
+- connect Input Button A to Ymin endstop
+- connect Input Button B to Ymax endstop
+- connect Input Button C to Zmin endstop
+- connect Input Button D to Zmax endstop
+- plug in the Arduino to USB to power it
+- it should work now (you need to flash the firmware first, if not done allready)
 
-License
-----
-*todo: add License information and credits here*
+
