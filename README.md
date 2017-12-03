@@ -5,7 +5,7 @@ Welcome to the Quiz Based Educational 3D Printed Candy Dispenser
 
 History and About
 -------------
-The Project was born in a Discord Group (todo: add link) Fan Group of the famous 3D Print Youtuber [**Choas Drucker**](https://www.youtube.com/user/ufgBishob).  Please check out his [**Channel**](https://www.youtube.com/user/ufgBishob) on youtube. 
+The Project was born in a [**Discord Group**](https://discordapp.com/invite/KWpvRSs) Fan Group of the famous 3D Print Youtuber [**Choas Drucker**](https://www.youtube.com/user/ufgBishob).  Please check out his [**Channel**](https://www.youtube.com/user/ufgBishob) on youtube. 
 
 The Initial Idea is a Candy Dispenser where you have to solve a question or similar, to get the Candy. The Hardware shall be mostly 3d printed or easy to source hardware. Like the very common RAMPS with lcd kit as the mainboard or the 9g hobby servo as actuator. 
 
