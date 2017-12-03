@@ -46,7 +46,9 @@ Electrical Connections / Schematic
 - connect Input Button B to Ymax endstop
 - connect Input Button C to Zmin endstop
 - connect Input Button D to Zmax endstop
+- plugin the lcd adapter
+- connect lcd cables
 - plug in the Arduino to USB to power it
-- it should work now (you need to flash the firmware first, if not done allready)
+- it should work now (you need to flash the firmware and prepare sd card first, if not done allready)
 
 
