@@ -1,3 +1,5 @@
+
+
 /* https://github.com/FrYakaTKoP/QuizCandyDispenser
 
 	QuizCandy-Hwtest
@@ -7,14 +9,19 @@
 	look at the Readme.md in the repo for connection diagramm
 
 */
-#include <Servo.h>
+
+#include <VarSpeedServo.h>
 #include "U8glib.h"
 
-
-#define EJECT_POS 0 // Eject postion (where the candy drops to the output compartment)
-#define LOAD_POS  180 // Loading postion (where the new candy gets taken from magazin)
+#define REST_POS 90 // rest postion (where the candy drops to the output compartment)
+#define EJECT_POS 5 // Eject postion (where the candy drops to the output compartment)
+#define EJECT_DELAY 200 // time in ms where the servo waits in Eject postion 
+#define LOAD_POS  175 // Loading postion (where the new candy gets taken from magazin)
+#define LOAD_DELAY 200 // time in ms where the servo waits in Eject postion 
+#define SERVO_SPEED 25 // 0 = fullspeed, 1=slowest, 255=fastest
 #define SERVO_MS_MIN 544 // the pulse width, in microseconds, corresponding to the minimum (0-degree) angle on the servo (defaults to 544) 
 #define SERVO_MS_MAX 2400 // the pulse width, in microseconds, corresponding to the maximum (180-degree) angle on the servo (defaults to 2400) 
+ 
 
 #define PIN_SERVO 11 // on RAMPS 1.4 -> SER1=11, SER2=6, SER3=5, SER4=4
 
@@ -35,7 +42,7 @@
 #define PIN_SD_DET 	49
 #define PIN_SD_CS 	53
 
-Servo servo;  // create servo object to control a servo
+VarSpeedServo servo;  // create servo object to control a servo
 int curPos = 0;   // variable to store the servo position
 
 U8GLIB_ST7920_128X64_1X u8g(PIN_LCD_MOSI, PIN_LCD_CLK, PIN_LCD_CS);  // SPI Com: SCK = en, MOSI = rw, CS = di
@@ -178,6 +185,7 @@ void draw(void) {
 
 void setup() {
   servo.attach(PIN_SERVO, SERVO_MS_MIN, SERVO_MS_MAX);  // attaches the servo on pin 9 to the servo object
+
   
   pinMode(PIN_BEEPER, OUTPUT); // Set PIN_BEEPER - pin 9 as an output
 
@@ -186,10 +194,13 @@ void setup() {
 }
 
 
-void changeServo()
-{             
-  curPos = (curPos == EJECT_POS) ? LOAD_POS : EJECT_POS;
-  servo.write(curPos);
+void moveServo()
+{            
+  servo.write(LOAD_POS, SERVO_SPEED, true);
+  delay(LOAD_DELAY);
+  servo.write(EJECT_POS, SERVO_SPEED, true);
+  delay(EJECT_DELAY);
+  servo.write(REST_POS, SERVO_SPEED, true);
 }
 
 void beep()
@@ -211,9 +222,10 @@ void beep()
 void loop() {
   if(digitalRead(PIN_ENCBTN) == LOW)
   {
-    changeServo();
+    moveServo();
     beep();
   }  
+
   // picture loop  
   u8g.firstPage();  
   do {
