@@ -2,7 +2,7 @@ QuizCandyDispenser
 ===================
 
 Welcome to the Quiz Based Educational 3D Printed Candy Dispenser
-![preview alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/preview.JPG)
+![preview alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/preview.jpg)
 
 
 History and About
