@@ -47,8 +47,8 @@ Electrical Connections / Schematic
 - Plug the Ramps board to the arduino mega
 - connect Servo to SER1 Servo output also put a jumper between 5V and Vcc (header left of the reset switch)
   refer to this picture:  
-![servo_pin alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/servo_pin.JPG)
-	[
+![servo_pin alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/servo_pin.jpg)
+	
 
 - put a jumper on the header left of the reset switch and short 5V with Vcc (https://github.com/MarlinFirmware/Marlin/wiki/Servo-Power, https://github.com/euphy/polargraph/wiki/Using-the-Polargraph-software-with-RAMPS-motorshield)
 - connect Input Button A to Xmin endstop
