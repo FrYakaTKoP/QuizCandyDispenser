@@ -20,6 +20,11 @@ License
 ----
 *todo: add License information and credits here*
 
+Credits
+----
+Lofwyr: Mechanical Design
+waschbaerbauch75: Testing and Pictures
+FrY:  Electronics and Firmware
 
 BOM: Bill Of Material
 -------------
@@ -43,14 +48,14 @@ Electrical Connections / Schematic
 -------------
 
 ![electronics alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/electronics.jpg)
+Thanks to **waschbaerbauch75** for taking pictures
 
 - Plug the Ramps board to the arduino mega
 - connect Servo to SER1 Servo output also put a jumper between 5V and Vcc (header left of the reset switch)
   refer to this picture:  
 ![servo_pin alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/servo_pin.png)
-	
+Thanks to **waschbaerbauch75** for taking pictures
 
-- put a jumper on the header left of the reset switch and short 5V with Vcc (https://github.com/MarlinFirmware/Marlin/wiki/Servo-Power, https://github.com/euphy/polargraph/wiki/Using-the-Polargraph-software-with-RAMPS-motorshield)
 - connect Input Button A to Xmin endstop
 - connect Input Button B to Xmax endstop
 - connect Input Button C to Ymin endstop
@@ -70,4 +75,5 @@ Software
 Libs:
 u8glib by oliver (Arduino Library Manager)
 VarSpeedServo (https://github.com/netlabtoolkit/VarSpeedServo) -> follow installation guide of the lib *TODO: Add more instructions*
+
 
