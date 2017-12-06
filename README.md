@@ -45,10 +45,10 @@ Electrical Connections / Schematic
 - Plug the Ramps board to the arduino mega
 - connect Servo to SER1 Servo output 
 - put a jumper on the header left of the reset switch and short 5V with Vcc (https://github.com/MarlinFirmware/Marlin/wiki/Servo-Power, https://github.com/euphy/polargraph/wiki/Using-the-Polargraph-software-with-RAMPS-motorshield)
-- connect Input Button A to Ymin endstop
-- connect Input Button B to Ymax endstop
-- connect Input Button C to Zmin endstop
-- connect Input Button D to Zmax endstop
+- connect Input Button A to Xmin endstop
+- connect Input Button B to Xmax endstop
+- connect Input Button C to Ymin endstop
+- connect Input Button D to Ymax endstop
 - plugin the lcd adapter
 - connect lcd cables
 - plug in the Arduino to USB to power it
