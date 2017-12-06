@@ -22,9 +22,9 @@ License
 
 Credits
 ----
-Lofwyr: Mechanical Design
-waschbaerbauch75: Testing and Pictures
-FrY:  Electronics and Firmware
+Lofwyr: Mechanical Design  
+waschbaerbauch75: Testing and Pictures  
+FrY:  Electronics and Firmware  
 
 BOM: Bill Of Material
 -------------
