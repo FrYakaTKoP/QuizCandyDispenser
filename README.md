@@ -2,7 +2,7 @@ QuizCandyDispenser
 ===================
 
 Welcome to the Quiz Based Educational 3D Printed Candy Dispenser
-![alt text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/docu/preview.JPG)
+![preview alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/preview.JPG)
 
 
 History and About
@@ -42,8 +42,14 @@ incl. cables and ramps adapter
 Electrical Connections / Schematic
 -------------
 
+![electronics alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/electronics.jpg)
+
 - Plug the Ramps board to the arduino mega
-- connect Servo to SER1 Servo output 
+- connect Servo to SER1 Servo output also put a jumper between 5V and Vcc (header left of the reset switch)
+  refer to this picture:  
+![servo_pin alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/servo_pin.JPG)
+	[
+
 - put a jumper on the header left of the reset switch and short 5V with Vcc (https://github.com/MarlinFirmware/Marlin/wiki/Servo-Power, https://github.com/euphy/polargraph/wiki/Using-the-Polargraph-software-with-RAMPS-motorshield)
 - connect Input Button A to Xmin endstop
 - connect Input Button B to Xmax endstop
