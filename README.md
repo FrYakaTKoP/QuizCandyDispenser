@@ -47,13 +47,13 @@ incl. cables and ramps adapter
 Electrical Connections / Schematic
 -------------
 
-![electronics alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/electronics.jpg)
+![electronics alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/electronics.jpg)  
 Thanks to **waschbaerbauch75** for taking pictures
 
 - Plug the Ramps board to the arduino mega
 - connect Servo to SER1 Servo output also put a jumper between 5V and Vcc (header left of the reset switch)
   refer to this picture:  
-![servo_pin alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/servo_pin.png)
+![servo_pin alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/servo_pin.png)  
 Thanks to **waschbaerbauch75** for taking pictures
 
 - connect Input Button A to Xmin endstop
