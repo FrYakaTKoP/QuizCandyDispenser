@@ -51,7 +51,7 @@ Electrical Connections / Schematic
 Thanks to **waschbaerbauch75** for taking pictures
 
 - Plug the Ramps board to the arduino mega
-- connect Servo to SER1 Servo output also put a jumper between 5V and Vcc (header left of the reset switch)
+- connect Servo to SER1 Servo output and also put a jumper between 5V and Vcc (header left of the reset switch)  
   refer to this picture:  
 ![servo_pin alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/servo_pin.png)  
 Thanks to **waschbaerbauch75** for taking pictures
