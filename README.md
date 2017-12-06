@@ -72,8 +72,6 @@ Software
 
 *sorry not ready, documentation will come soon*
 
-Libs:
-u8glib by oliver (Arduino Library Manager)
-VarSpeedServo (https://github.com/netlabtoolkit/VarSpeedServo) -> follow installation guide of the lib *TODO: Add more instructions*
-
+Libs:  
+u8glib by oliver (Arduino Library Manager)  
 
