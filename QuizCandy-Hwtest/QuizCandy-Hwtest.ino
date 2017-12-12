@@ -25,26 +25,27 @@
 
 #define SILENT_SERVO
 
+
 #define PIN_SERVO 11 // on RAMPS 1.4 -> SER1=11, SER2=6, SER3=5, SER4=4
 
 // Button Pins connected to RAMPS 1.4 endstops (X-min=3,X-max=2,Y-min=14 (non interrupt), Y-max=15 (non interrupt), Z-min= 18, Z-max=19)
+#define PIN_BTN_A     3 // Z-min endstop
+#define PIN_BTN_B     2 // Z-max endstop
+#define PIN_BTN_C     14 // Y-min endstop
+#define PIN_BTN_D     15 // Y-max endstop
 
-#define PIN_BTN_A 		3 // Z-min endstop
-#define PIN_BTN_B 		2 // Z-max endstop
-#define PIN_BTN_C 		14 // Y-min endstop
-#define PIN_BTN_D 		15 // Y-max endstop
+#define PIN_LCD_MOSI  23 // MOSI, SID, LCD_PINS_ENABLE
+#define PIN_LCD_CLK   17 // CLK, PINS_D4 
+#define PIN_LCD_CS    16 // CS, LCD_PINS_RS
+#define PIN_BEEPER    37
+#define PIN_ENCBTN    35
+#define PIN_ENC1      33
+#define PIN_ENC2      31
+#define PIN_RSTBTN    41
 
-#define PIN_LCD_MOSI	23
-#define PIN_LCD_CLK		17
-#define PIN_LCD_CS 		16
-#define PIN_BEEPER 	  37 // gt2560 18
-#define PIN_ENCBTN 	  35 // gt2560 19
-#define PIN_ENC1 	    33 // gt2560 42
-#define PIN_ENC2 	    31 // gt2560 40
-#define PIN_RSTBTN 		41
+#define PIN_SD_DET    49
+#define PIN_SD_CS     53
 
-#define PIN_SD_DET 		49
-#define PIN_SD_CS 		53
 
 //VarSpeedServo servo;  // create servo object to control a servo
 Servo servo;  // use factory servo lib
