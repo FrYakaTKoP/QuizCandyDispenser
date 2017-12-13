@@ -3,7 +3,7 @@ QuizCandyDispenser
 
 Welcome to the Quiz Based Educational 3D Printed Candy Dispenser
 ![preview alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/preview.jpg)  
-![preview alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/preview2.jpg)  
+![preview alt_text](https://raw.githubusercontent.com/FrYakaTKoP/QuizCandyDispenser/master/doc/preview2.JPG)  
 Mechanical Design by Lofwyr
 
 
