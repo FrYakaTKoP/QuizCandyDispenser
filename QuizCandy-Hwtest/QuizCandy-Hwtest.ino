@@ -58,9 +58,11 @@ void draw(void) {
   u8g.setFontRefHeightExtendedText();
   u8g.setDefaultForegroundColor();
   u8g.setFontPosTop();
-  u8g.drawStr( 2, 0, "drawRFrame/Box");
-  u8g.drawRFrame(5, 10, 40, 30, 2);
-  u8g.drawRBox(50, 10, 25, 40, 2);
+  u8g.drawStr( 2, 0, "Quiz Candy Dispenser");
+  u8g.drawRFrame(5, 15, 20, 10, 2);
+  u8g.drawRBox(30, 10, 15, 20, 2);
+  u8g.drawStr( 2, 42, "press any Button to");
+  u8g.drawStr( 2, 52, "get some candy");
 }
 
 void setup() {
