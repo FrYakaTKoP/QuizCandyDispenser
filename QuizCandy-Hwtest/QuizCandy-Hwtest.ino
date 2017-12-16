@@ -27,16 +27,6 @@
 
 #define SILENT_SERVO
 
-
-// Answer was correct melody:
-//int melodyCorrect[] = {
-//  NOTE_A5,  NOTE_B5,  NOTE_C5,  NOTE_B5,  NOTE_C5,  NOTE_D5,  NOTE_C5,  NOTE_D5, NOTE_E5,  NOTE_D5,  NOTE_E5,  NOTE_E5
-//};
-// note durations: 4 = quarter note, 8 = eighth note, etc.:
-//int melodyCorrectDurations[] = {
-//  16, 16, 16, 8, 16, 16, 16, 8, 16, 16, 8, 16
-//};
-
 // Answer was correct melody:
 int melodyCorrect[] = {
   NOTE_C4, NOTE_C5, NOTE_A3, NOTE_A4,
@@ -48,6 +38,7 @@ int melodyCorrectDurations[] = {
   12, 12, 12, 12,
   12, 12, 128,  128
 };
+
 // Answer was wrong melody:
 int melodyWrong[] = {
   NOTE_G3, 0, NOTE_G3, 0,
@@ -59,10 +50,6 @@ int melodyWrongDurations[] = {
   2, 16, 4, 128,
   128, 128, 128, 128
 };
-
-
-
-
 
 #define PIN_SERVO 11 // on RAMPS 1.4 -> SER1=11, SER2=6, SER3=5, SER4=4
 
@@ -97,10 +84,24 @@ void draw(void) {
   u8g.setDefaultForegroundColor();
   u8g.setFontPosTop();
   u8g.drawStr( 2, 0, "Quiz Candy Dispenser");
-  u8g.drawRFrame(5, 15, 20, 10, 2);
-  u8g.drawRBox(30, 10, 15, 20, 2);
-  u8g.drawStr( 2, 42, "press any Button to");
-  u8g.drawStr( 2, 52, "get some candy");
+  u8g.drawStr( 2, 10, "Hw Test Sketch");
+
+  u8g.drawRFrame(1, 41, 9, 11, 2);
+  u8g.drawStr( 3, 42, "A");
+  u8g.drawRFrame(65, 41, 9, 11, 2);
+  u8g.drawStr( 67, 42, "B");
+  u8g.drawRFrame(1, 53, 9, 11, 2);
+  u8g.drawStr( 3, 54, "C");
+  u8g.drawRFrame(65, 53, 9, 11, 2);
+  u8g.drawStr( 67, 54, "D");
+
+  
+  u8g.setFont(u8g_font_5x8);
+  u8g.setFontPosTop();
+  u8g.drawStr( 11, 43, "Antwort A");
+  u8g.drawStr( 75, 43, "Antwort B");
+  u8g.drawStr( 11, 55, "Antwort C");
+  u8g.drawStr( 75, 55, "Antwort D");
 }
 
 void setup() {
