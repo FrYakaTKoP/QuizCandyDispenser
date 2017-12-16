@@ -41,13 +41,13 @@ int melodyCorrectDurations[] = {
 
 // Answer was wrong melody:
 int melodyWrong[] = {
-  NOTE_G3, 0, NOTE_G3, 0,
+  NOTE_B2, 0, 0, 0,
   0, 0, 0,  0
 };
 
 // note durations: 4 = quarter note, 8 = eighth note, etc.:
 int melodyWrongDurations[] = {
-  2, 16, 4, 128,
+  2, 128, 128, 128,
   128, 128, 128, 128
 };
 
