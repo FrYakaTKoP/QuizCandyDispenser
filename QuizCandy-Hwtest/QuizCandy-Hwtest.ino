@@ -13,6 +13,8 @@
 
 #include <Servo.h>
 #include "U8glib.h"
+#include "pitches.h"
+
 
 #define EJECT_POS 0 // Eject postion (where the candy drops to the output compartment)
 #define EJECT_DELAY 400 // time in ms where the servo waits in Eject postion 
@@ -24,6 +26,42 @@
 #define REST_POS 90 // rest postion, don't edit
 
 #define SILENT_SERVO
+
+
+// Answer was correct melody:
+//int melodyCorrect[] = {
+//  NOTE_A5,  NOTE_B5,  NOTE_C5,  NOTE_B5,  NOTE_C5,  NOTE_D5,  NOTE_C5,  NOTE_D5, NOTE_E5,  NOTE_D5,  NOTE_E5,  NOTE_E5
+//};
+// note durations: 4 = quarter note, 8 = eighth note, etc.:
+//int melodyCorrectDurations[] = {
+//  16, 16, 16, 8, 16, 16, 16, 8, 16, 16, 8, 16
+//};
+
+// Answer was correct melody:
+int melodyCorrect[] = {
+  NOTE_C4, NOTE_C5, NOTE_A3, NOTE_A4,
+  NOTE_AS3, NOTE_AS4, 0,  0
+};
+
+// note durations: 4 = quarter note, 8 = eighth note, etc.:
+int melodyCorrectDurations[] = {
+  12, 12, 12, 12,
+  12, 12, 128,  128
+};
+// Answer was wrong melody:
+int melodyWrong[] = {
+  NOTE_G3, 0, NOTE_G3, 0,
+  0, 0, 0,  0
+};
+
+// note durations: 4 = quarter note, 8 = eighth note, etc.:
+int melodyWrongDurations[] = {
+  2, 16, 4, 128,
+  128, 128, 128, 128
+};
+
+
+
 
 
 #define PIN_SERVO 11 // on RAMPS 1.4 -> SER1=11, SER2=6, SER3=5, SER4=4
@@ -76,6 +114,7 @@ void setup() {
   pinMode(PIN_BTN_B, INPUT_PULLUP);
   pinMode(PIN_BTN_C, INPUT_PULLUP);
   pinMode(PIN_BTN_D, INPUT_PULLUP);
+  pinMode(PIN_RSTBTN, INPUT_PULLUP);
 
   delay(200);
 #if defined(SILENT_SERVO)
@@ -115,47 +154,66 @@ void moveServo()
 #endif
 }
 
-void beep()
+void beep(int melody[], int durations[])
 {
-  tone(PIN_BEEPER, 800);
-  delay(100);
-  noTone(PIN_BEEPER);
-  delay(100);
-  tone(PIN_BEEPER, 800);
-  delay(100);
-  noTone(PIN_BEEPER);
-  delay(200);
-  tone(PIN_BEEPER, 1200);
-  delay(150);
-  noTone(PIN_BEEPER);
+  int melodyLength = sizeof(melody) / sizeof(int);
+  // TODO: Variable melody length not working using fixed for now
+  // iterate over the notes of the melody:
+  for (int thisNote = 0; thisNote < 8; thisNote++) {
+
+    // to calculate the note duration, take one second divided by the note type.
+    //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+    int noteDuration = 1000 / durations[thisNote];
+    tone(PIN_BEEPER, melody[thisNote], noteDuration);
+
+    // to distinguish the notes, set a minimum time between them.
+    // the note's duration + 30% seems to work well:
+    int pauseBetweenNotes = noteDuration * 1.30;
+    delay(pauseBetweenNotes);
+    // stop the tone playing:
+    noTone(PIN_BEEPER);
+  }
 }
 
 void loop() {
-  bool feed = false;
+  bool newInput = false;
+  bool win = true;
   if (digitalRead(PIN_ENCBTN) == LOW)
   {
-    feed = true;
+    newInput = true;
   }
   if (digitalRead(PIN_BTN_A) == LOW)
   {
-    feed = true;
+    newInput = true;
   }
   if (digitalRead(PIN_BTN_B) == LOW)
   {
-    feed = true;
+    newInput = true;
   }
   if (digitalRead(PIN_BTN_C) == LOW)
   {
-    feed = true;
+    newInput = true;
   }
   if (digitalRead(PIN_BTN_D) == LOW)
   {
-    feed = true;
+    newInput = true;
   }
-  if (feed)
+  if (digitalRead(PIN_RSTBTN) == LOW)
   {
-    moveServo();
-    beep();
+    newInput = true;
+    win = false;
+  }
+  if(newInput)
+  {
+    if(win)
+    {    
+      beep(melodyCorrect, melodyCorrectDurations);
+      moveServo(); 
+    }
+    else
+    {
+      beep(melodyWrong, melodyWrongDurations);
+    }
   }
 
   // picture loop
